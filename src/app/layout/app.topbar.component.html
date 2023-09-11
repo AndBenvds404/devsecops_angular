@@ -1,0 +1,44 @@
+
+
+<body>
+    <div class="layout-topbar">
+        <a class="layout-topbar-logo" routerLink="">
+            <img  src="../../assets/demo/images/blocks/logos/logo_iess.png" alt="logo">
+            <span></span>
+        </a>
+    
+        <button #menubutton class="p-link layout-menu-button layout-topbar-button" (click)="layoutService.onMenuToggle()">
+            <i class="pi pi-bars"></i>
+        </button>
+    
+        <button #topbarmenubutton class="p-link layout-topbar-menu-button layout-topbar-button" (click)="layoutService.showProfileSidebar()">
+            <i class="pi pi-ellipsis-v"></i>
+        </button>
+    
+        
+        <div #topbarmenu class="layout-topbar-menu" [ngClass]="{'layout-topbar-menu-mobile-active': layoutService.state.profileSidebarVisible}">
+
+            <div >
+                <span class="p-input-icon-right layout-topbar-menu">
+                    <input type="text" pInputText placeholder="Search"/>
+                    <i class="pi pi-search"></i>
+                </span>
+            </div>
+            <button class="p-link layout-topbar-button">
+                <i class="pi pi-sign-in"></i>
+                <span>log in</span>
+            </button>
+           
+            
+            
+            
+
+        </div>
+    </div>
+    
+</body>
+
+<style>
+
+</style>
+
