@@ -2,7 +2,7 @@
 	
 	<div class="col-12">
 		<div class="card">
-			<h5>Empresa</h5>
+			<h5>Nombre Tabla</h5>
 			<p-toast></p-toast>
 			<p-table [value]="products" dataKey="name" [expandedRowKeys]="expandedRows" responsiveLayout="scroll">
 				<ng-template pTemplate="caption">
@@ -15,8 +15,8 @@
 						<th style="width: 3rem"></th>
 						<th pSortableColumn="name">Nombre <p-sortIcon field="name"></p-sortIcon></th>
 						<th pSortableColumn="inventoryStatus">Estado <p-sortIcon field="inventoryStatus"></p-sortIcon></th>
-						<th pSortableColumn="rating"></th>
-						<th pSortableColumn="actualizar"></th>
+						<th ></th>
+						<th ></th>
 						
 					</tr>
 				</ng-template>
@@ -29,7 +29,7 @@
 						<td><span [class]="'product-badge status-' + product.inventoryStatus.toLowerCase()">{{product.inventoryStatus}}</span></td>
 						<td style="min-width: 10rem;"><p-inputSwitch [(ngModel)]="valSwitch"></p-inputSwitch></td>
 						<td><p-button type="button">Actualizar</p-button></td>
-						<!--  <td><span [class]="'product-badge status-' + product.inventoryStatus.toLowerCase()">{{product.inventoryStatus}}</span></td>  -->
+						
 					</tr>
 				</ng-template>
 				<ng-template pTemplate="rowexpansion" let-product>

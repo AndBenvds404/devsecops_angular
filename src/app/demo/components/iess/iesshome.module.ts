@@ -1,16 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { FormsModule } from '@angular/forms';
-
-import {BienvenidaRoutingModule} from './iesshome-routing.module'
+import {BienvenidaRoutingModule} from './iesshome-routing.module';
+import { OpcionesRoutingModule } from './opciones/opciones-routing.module';
 
 @NgModule({
     imports: [
         CommonModule,
-        FormsModule,
-        BienvenidaRoutingModule
-    ],
-   
+        BienvenidaRoutingModule,
+        OpcionesRoutingModule
+    ],      
 })
-export class BienvenidaModule { }
+
+export class IessHomeModule { }
+  

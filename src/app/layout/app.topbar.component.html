@@ -24,15 +24,14 @@
                     <i class="pi pi-search"></i>
                 </span>
             </div>
-            <button class="p-link layout-topbar-button">
-                <i class="pi pi-sign-in"></i>
-                <span>log in</span>
+            <button class="boton" (click)="login()">
+                <i class="pi pi-sign-in" ></i>
+                <span  >Iniciar Sesión</span>
             </button>
-           
-            
-            
-            
 
+            <button (click)="login()">test</button>
+            
+            
         </div>
     </div>
     
@@ -40,5 +39,22 @@
 
 <style>
 
+.boton{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        background-color: #3F51B5;
+        color: white;
+        border: none;
+        border-radius: 25px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .boton:hover{
+        background-color: #2A3F9D;
+    }
 </style>
 

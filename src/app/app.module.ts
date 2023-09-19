@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -11,23 +11,31 @@ import { EventService } from './demo/service/event.service';
 import { IconService } from './demo/service/icon.service';
 import { NodeService } from './demo/service/node.service';
 import { PhotoService } from './demo/service/photo.service';
-import { bienvenidaiessComponent } from './demo/components/iess/bienvenida/bienvenidaiess.component';
+import { KeycloakAngularModule, KeycloakService } from 'keycloak-angular';
+import { initializeKeycloak } from './auth/keycloak.init';
+
 
 
 
 @NgModule({
     declarations: [
-        AppComponent, NotfoundComponent
+        AppComponent, NotfoundComponent, 
     ],
     imports: [
         AppRoutingModule,
         AppLayoutModule, 
+        KeycloakAngularModule
     ],
     providers: [
-        { provide: LocationStrategy, useClass: HashLocationStrategy },
+        {  provide: APP_INITIALIZER,
+            useFactory: initializeKeycloak,
+            multi: true,
+            deps: [KeycloakService]
+             },
         CountryService, CustomerService, EventService, IconService, NodeService,
         PhotoService, ProductService,
     ],
     bootstrap: [AppComponent]
 })
 export class AppModule { }
+

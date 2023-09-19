@@ -17,8 +17,9 @@ import { AppFooterComponent } from './app.footer.component';
 import { AppConfigModule } from './config/config.module';
 import { AppSidebarComponent } from "./app.sidebar.component";
 import { AppLayoutComponent } from "./app.layout.component";
-
 import { AppMenuIessComponent } from './iess/app.menu-iess.component';
+import { MenuModule } from 'primeng/menu'
+
 
 @NgModule({
     declarations: [
@@ -44,6 +45,7 @@ import { AppMenuIessComponent } from './iess/app.menu-iess.component';
         RippleModule,
         RouterModule,
         AppConfigModule,
+        MenuModule
         
     ],
    
